@@ -2,12 +2,11 @@
 #include <math.h>
 
 int main(void) {
-    int n;
-    float a1, d;
-    scanf("%f %f %d", &a1, &d, &n);
-    
-    double answer = a1 * pow(d,n-1);
-    
-    printf("%lf\n", answer);
+    unsigned n;
+    float a1, quot;
+    scanf("%f %f %u", &a1, &quot, &n);
+	n > 0 || printf("invalid element index\n");
+    n > 0 && printf("%lf\n", a1 * pow(quot,n-1));
+
     return 0;
 }
