@@ -2,7 +2,7 @@
 
 int main(void){
     double r;
-    const double pi = 3.14;
+    const double pi = 3.1415926536; // one may also decide to use e.g. acos(-1)
     scanf("%lf", &r);
     int isValid = r > 0;
 	const double circumference = 2 * pi * r;
