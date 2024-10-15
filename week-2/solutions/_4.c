@@ -1,21 +1,15 @@
 #include <stdio.h>
 
 int main(void) {
-    double a, b, c;
-    scanf("%lf %lf %lf", &a, &b, &c);
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
     
-    int aZero = a == 0;
+	a || printf("a != 0 expected\n");
     
-    const double discriminant  = aZero * (b*b - 4*a*c);
-    
-    
-    int noSolution = discriminant < 0;
-    int twoSolutions = discriminant > 0;
-    int oneSolution = (!noSolution && !twoSolutions) || aZero;
-    
-    (oneSolution && printf("1 real solution\n")) ||
-    (twoSolutions && printf("2 real solutions\n")) ||
-    printf("No real solutions\n");
+    const int discriminant = b*b - 4*a*c;
+	const unsigned solutionsCnt = (discriminant == 0) + 2*(discriminant > 0);
 
+	a && printf("Solutions count: %u\n", solutionsCnt);
+    
     return 0;
 }
