@@ -5,7 +5,8 @@ int main(void){
     const double pi = 3.14;
     scanf("%lf", &r);
     int isValid = r > 0;
+	const double circumference = 2 * pi * r;
     const double area = r * r * pi;
-    ( isValid && printf("Area: %.2lf\n", area) ) || printf("Invalid data!\n");
+    ( isValid && printf("Circumference: %.2lf\nArea: %.2lf\n", circumference, area) ) || printf("Invalid data!\n");
     return 0;
 }
