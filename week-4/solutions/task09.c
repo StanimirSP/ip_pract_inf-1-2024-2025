@@ -1,28 +1,19 @@
 #include <stdio.h>
-#include <limits.h>
 
 int main(void)
 {
-	unsigned a, b, c;
-	scanf("%u%u%u", &a, &b, &c);
-	if(a > UCHAR_MAX || b > UCHAR_MAX || c > UCHAR_MAX)
-	{
-		fprintf(stderr, "bad code\n");
-		return 1;
-	}
+	unsigned char a, b, c;
+	scanf("%hhu%hhu%hhu", &a, &b, &c);
 
 	const unsigned char  mask_bit6_bit7 = 0xC0; // 1100 0000
 	const unsigned char	      mask_bit7 = 0x80; // 1000 0000
 	const unsigned char       mask_bit0 = 0x01; // 0000 0001
 	const unsigned char mask_nibble_low = 0x0F; // 0000 1111
 
-	// notice that the results are reduced modulo 2 to the power of 8 by assigning them to variables of type `unsigned char`
 	// notice that the encoding functions for the 2nd and the 3rd symbols are self-inverse, but this is not the case for the 1st
 	unsigned char decoded_a =
-		(a << 2) |						// a7 a6 @ a5 a4 a3 a2 a1 a0  0  0 |
-		((a & mask_bit6_bit7) >> 6);	//  0  0 @  0  0  0  0  0  0 a7 a6
-										// 		 ^ - marks the end of the least significant byte 
-										// 			 only the bits to the right of it will be stored in `decoded_a`
+		(a << 2) |						// a5 a4 a3 a2 a1 a0  0  0 |
+		((a & mask_bit6_bit7) >> 6);	//  0  0  0  0  0  0 a7 a6
 	unsigned char decoded_b =
 		(b & ~(mask_bit0 | mask_bit7)) |	//  0 b6 b5 b4 b3 b2 b1  0 |
 		((b & mask_bit7) >> 7) |			//  0  0  0  0  0  0  0 b7 |
