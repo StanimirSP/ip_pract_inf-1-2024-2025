@@ -85,4 +85,4 @@ $N$ извежда първите $N$ члена на редицата на Фи
 По въведено цяло положително число $N$, изведете $\lfloor \log_2(N)\rfloor$.
 
 С $\lfloor x\rfloor$ означаваме най-голямото цяло число, което не надвишава $x$ (закръгляне надолу до цяло число).  
-Формално $\lfloor x\rfloor = \max\{ y\in \mathbb{Z}\mid y\le x \}$.
+Формално $\lfloor x\rfloor = \max \lbrace y\in \mathbb{Z}\mid y\le x \rbrace$.
