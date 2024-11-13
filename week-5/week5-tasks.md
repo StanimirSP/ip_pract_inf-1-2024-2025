@@ -29,6 +29,6 @@
 да се определи взаимното им положение.
 | Вход         | Изход                                      |
 | --------     | -------                                    |
-| (1, 1) 1     | Point A(1, 1) is OUTSIDE the rectangle     |
-| (0.5, 0) 1   | Point A(0.5, 0) is ON the rectangle        |
-| (0.1, 0.1) 1 | Point A(0.1, 0.1) is INSIDE the rectangle  |
+| (1, 1) 1     | Point A(1, 1) is OUTSIDE the square        |
+| (0.5, 0) 1   | Point A(0.5, 0) is ON the square           |
+| (0.1, 0.1) 1 | Point A(0.1, 0.1) is INSIDE the square     |
