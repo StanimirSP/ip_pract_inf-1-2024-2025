@@ -8,7 +8,7 @@ int main(void)
 {
 	srand(time(NULL)); // seed the pseudo-random number generator from the system clock
 					   // unless you have a specific reason not to do so,
-					   // the pseudo - random number generator should only be seeded once, 
+					   // the pseudo-random number generator should only be seeded once, 
 					   // before any calls to rand(), at the start of the program
 
 	// rand() returns a pseudo-random number in [0, RAND_MAX]
