@@ -15,7 +15,10 @@ void printIntArray(const int arr[], unsigned size) {
     puts("");
 }
 
-void rotateArray(int arr[], int size, int rotations) {
+void rotateArray(int arr[], unsigned size, int rotations) {
+    if(size <= 1)
+        return;
+    
     if (rotations > 0) {
         for (int r = 0; r < rotations; r++) {
             int last = arr[size - 1];

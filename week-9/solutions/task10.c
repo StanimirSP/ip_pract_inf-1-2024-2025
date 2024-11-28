@@ -25,12 +25,17 @@ int isPrime(int n) {
     return 1;
 }
 
+void removeElementAtIndex(int arr[], unsigned size, unsigned index) {
+    for (unsigned i = index; i < size - 1; i++) {
+            arr[j] = arr[j + 1];
+        }
+}
+
+// There is a better way to remove numbers but this is more intuitive.
 unsigned removeNumbersDivisibleBy5(int arr[], unsigned size) {
     for (unsigned i = 0; i < size; i++) {
         if(arr[i] % 5 ==0) {
-            for (unsigned j = i; j < size - 1; j++) {
-                arr[j] = arr[j + 1];
-            }
+            removeElementAtIndex(arr, size, i);
             size--;
             // If we don't "i--;" we will go the the next element and skip it
             // {5, 25, 200, 56}
@@ -45,9 +50,7 @@ unsigned removeNumbersDivisibleBy5(int arr[], unsigned size) {
 unsigned removeNumbersLessThan100(int arr[], unsigned size) {
     for (unsigned i = 0; i < size; i++) {
         if(arr[i] < 100) {
-            for (unsigned j = i; j < size - 1; j++) {
-                arr[j] = arr[j + 1];
-            }
+            removeElementAtIndex(arr, size, i);
             size--;
             i--;
         }
@@ -58,9 +61,7 @@ unsigned removeNumbersLessThan100(int arr[], unsigned size) {
 unsigned removePrimeNumbers(int arr[], unsigned size) {
     for (unsigned i = 0; i < size; i++) {
         if(isPrime(arr[i])) {
-            for (unsigned j = i; j < size - 1; j++) {
-                arr[j] = arr[j + 1];
-            }
+            removeElementAtIndex(arr, size, i);
             size--;
             i--;
         }
