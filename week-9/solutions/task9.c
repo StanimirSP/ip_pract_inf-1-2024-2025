@@ -16,7 +16,8 @@ void printIntArray(const int arr[], unsigned size) {
 }
 
 int isPrime(int n) {
-    n = n < 0 ? -n : n;
+    if(n < 2)
+        return 0;
     for (unsigned i = 2; i*i <= n; i++) {
         if(n % i == 0)
             return 0;
