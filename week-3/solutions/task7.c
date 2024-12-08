@@ -12,11 +12,11 @@ int main() {
 
     a != 0 ?
         d > 0 ?
-            ( sol1 = (-b - sqrt(d)) / (2 * a) ) +
-            ( sol2 = (-b + sqrt(d)) / (2 * a) ) +
+            ( sol1 = (-b - sqrt(d)) / (2.0 * a) ) +
+            ( sol2 = (-b + sqrt(d)) / (2.0 * a) ) +
             (solCount = 2) :
         d == 0 ?
-            ( sol1 = (-b - sqrt(d)) / (2 * a) ) +
+            ( sol1 = -b / (2.0 * a) ) +
             ( solCount = 1 ) :
         (solCount = 0) :
 
