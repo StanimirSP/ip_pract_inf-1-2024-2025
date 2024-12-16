@@ -72,7 +72,7 @@ int main(void)
 // notice the code repetition without using higher order functions
 // and we should another for every new remove condition we want to use
 /*
-unsigned remove_if_divisible_by_5(int* arr, unsigned sz, int condition(int))
+unsigned remove_if_divisible_by_5(int* arr, unsigned sz)
 {
 	unsigned new_sz = 0;
 	for(unsigned i = 0; i < sz; i++)
@@ -81,7 +81,7 @@ unsigned remove_if_divisible_by_5(int* arr, unsigned sz, int condition(int))
 	return new_sz;
 }
 
-unsigned remove_if_less_than_100(int* arr, unsigned sz, int condition(int))
+unsigned remove_if_less_than_100(int* arr, unsigned sz)
 {
 	unsigned new_sz = 0;
 	for(unsigned i = 0; i < sz; i++)
@@ -90,7 +90,7 @@ unsigned remove_if_less_than_100(int* arr, unsigned sz, int condition(int))
 	return new_sz;
 }
 
-unsigned remove_if_prime(int* arr, unsigned sz, int condition(int))
+unsigned remove_if_prime(int* arr, unsigned sz)
 {
 	unsigned new_sz = 0;
 	for(unsigned i = 0; i < sz; i++)
