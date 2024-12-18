@@ -1,0 +1,1 @@
+../../week-A/solutions/task06.c
