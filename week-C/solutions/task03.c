@@ -21,7 +21,7 @@ char* readline(size_t* ptr_sz, char delim)
 	char *str = malloc(initial_capacitiy);
 	if(!str) return NULL;
 
-	char ch;
+	int ch;
 	*ptr_sz = 0;
 	size_t current_capacity = initial_capacitiy;
 	while((ch = getchar()) != delim)
