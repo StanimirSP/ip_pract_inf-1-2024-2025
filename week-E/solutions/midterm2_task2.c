@@ -41,7 +41,8 @@ void swap(void* a, void* b, size_t obj_size);
 const void* min_element(const void* ptr, size_t count, size_t el_size, Compare cmp);
 void selection_sort(void* ptr, size_t count, size_t el_size, Compare cmp);
 
-int isValidWordSym(char ch) {
+int isValidWordSym(char ch)
+{
 	return (ch >= 'a' && ch <= 'z') ||
 		(ch >= 'A' && ch <= 'Z') ||
 		(ch >= '0' && ch <= '9');
@@ -62,7 +63,8 @@ void dealloc_words(char** words, size_t word_cnt)
 	free(words);
 }
 
-char **splitWords(const char *text, const char* delims, size_t word_cnt) {
+char **splitWords(const char *text, const char* delims, size_t word_cnt)
+{
 	char* text_copy = str_dup(text);
 	if(!text_copy) return NULL;
 
@@ -95,7 +97,8 @@ char **splitWords(const char *text, const char* delims, size_t word_cnt) {
 
 
 // this function is destructive. copy `text` if you need it
-size_t countWords(char *text, const char* delims) {
+size_t countWords(char *text, const char* delims)
+{
 	size_t word_cnt = 0;
 	char* token = strtok(text, delims);
 	while(token)
@@ -191,7 +194,8 @@ void print_hist(char** words, size_t word_cnt)
 	printf("\n");
 }
 
-int main(void) {
+int main(void)
+{
 	char str[MAX_SIZE + 1];
 	scanf("%1023[^\n]", str);
 	char delims[UCHAR_MAX + 2];
