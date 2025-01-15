@@ -36,9 +36,6 @@ chair
 #define MAX_SIZE 1023
 
 typedef int (*Compare)(const void*, const void*);
-void swap_byte(unsigned char* a, unsigned char* b);
-void swap(void* a, void* b, size_t obj_size);
-const void* min_element(const void* ptr, size_t count, size_t el_size, Compare cmp);
 void selection_sort(void* ptr, size_t count, size_t el_size, Compare cmp);
 
 int isValidWordSym(char ch)
